@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 class Main {
     /*
     public static void main(String[] args){
@@ -87,7 +87,7 @@ class Main {
         OperacoesBancaria operacoes = new OperacoesBancaria();
 
 
-        System.out.println("Saldo: R$ " + operacoes.verificarSaldo(conta));
+         System.out.println("Saldo: R$ " + operacoes.verificarSaldo(conta));
 
         operacoes.depositar(conta, 300.0);
         System.out.println("Saldo depois deposito: R$ " + operacoes.verificarSaldo(conta));
@@ -96,7 +96,7 @@ class Main {
         System.out.println("Saldo depois saque: R$ " + operacoes.verificarSaldo(conta));
     }
     */    
-
+    /*
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -124,6 +124,58 @@ class Main {
         scanner.close();
         System.out.println("Programa encerrado.");
     }
+*/
+/*
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        VerificarSubString verifca = new VerificarSubString();
+        
+        int respota =1;
+        do{
+            System.out .print("Insira o string a:  ");
+            String a = scanner.nextLine();
+            System.out .print("Insira o string b:  ");
+            String b = scanner.nextLine();
+
+            if (verifca.VerificarContidaOuN(a, b)){
+                System.out.println("A string A esta contida na String B e se repete " + verifca.ContadorOcorrencias(a, b)+ " vezes");
+            }else{
+                System.out.println("A string A não esta contida na String B");
+            }
+            System.out.print("________________________________________");
+            System.out.print("Deseja continuar ? \n 0 - Sair");
+            respota = scanner.nextInt();
+        }while (respota !=0);
+    }*/
+
+    public static void main(String[] args){
+        Motorista motorista = new Motorista();
+        motorista.setNome("Joao");
+        motorista.setMarca_carro("Hyundai HB20 2024");
+        motorista.setCor_carro("Preto");
+        motorista.setPlaca_carro("OZL7H33");
+        Passageiro passageiro = new Passageiro();
+        passageiro.setNome("Pedro");
+        Endereco endereco_origem = new Endereco();
+        endereco_origem.setBairro("Bairro C");
+        endereco_origem.setNumero(124);
+        endereco_origem.setRua("Rua Z");
+        endereco_origem.setCidade("Cuiaba");
+        Endereco endereco_destino = new Endereco();
+        endereco_destino.setBairro("Bairro A");
+        endereco_destino.setNumero(420);
+        endereco_destino.setRua("Rua C");
+        endereco_destino.setCidade("Varzea Grande");
+
+        Corrida corrida = new Corrida();
+        corrida.setMotorista(motorista);
+        corrida.setPassageiro(passageiro);
+        corrida.setEndereco_Destino(endereco_destino);
+        corrida.setEndereco_Origem(endereco_origem);
+
+        corrida.SimularCorrida();
+
+
+
+    }
 }
-
-
