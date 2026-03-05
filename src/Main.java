@@ -147,7 +147,7 @@ class Main {
             respota = scanner.nextInt();
         }while (respota !=0);
     }*/
-
+/* 
     public static void main(String[] args){
         Motorista motorista = new Motorista();
         motorista.setNome("Joao");
@@ -174,8 +174,47 @@ class Main {
         corrida.setEndereco_Origem(endereco_origem);
 
         corrida.SimularCorrida();
+    }*/
+    public static void main(String[] args) {
+        /* 
+        Pet pet1 = new Pet("Pedro","AuAu","Labrador","Cachorro",4,true);
+        Pet pet2 = new Pet("Mariana Souza","Mimi", "Siamês","Gato",2,false);
 
+
+        pet1.ImprimirDados();
+
+ 
+        pet2.ImprimirDados();*/
+
+        Cachorro cachorro = new Cachorro("Pedro","AuAu","Labrador","Cachorro",4,true,"Dourado");
+        Gato gato = new Gato("Mariana Souza","Mimi", "Siamês","Gato",2,false,"Branco");
+
+        cachorro.FazerSom();
+        gato.FazerSom();
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
