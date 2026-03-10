@@ -1,4 +1,7 @@
 //import java.util.Scanner;
+
+import java.util.ArrayList;
+
 class Main {
     /*
     public static void main(String[] args){
@@ -175,24 +178,68 @@ class Main {
 
         corrida.SimularCorrida();
     }*/
+    /* 
     public static void main(String[] args) {
+
+        ArrayList<Pet> pets = new ArrayList<>();
+
+        
+        pets.add(new Cachorro("João", "Rex", "Labrador", "Domestico", 3, true, "Marrom"));
+        pets.add(new Gato("Maria", "Mimi", "Siamês", "Domestico", 2, true, "Branco"));
+
+        for (Pet pet : pets) {
+            pet.FazerSom(); 
+        }
+
+    }*/
+
         /* 
-        Pet pet1 = new Pet("Pedro","AuAu","Labrador","Cachorro",4,true);
-        Pet pet2 = new Pet("Mariana Souza","Mimi", "Siamês","Gato",2,false);
+       public static void main(String[] args) {
+
+        Analista analista = new Analista("Carlos", 5000);
+        Gerente gerente = new Gerente("Mariana", 10000);
+
+        System.out.println("Pagamento Analista: " + analista.calcularPagamento());
+        System.out.println("Pagamento Gerente: " + gerente.calcularPagamento());
+
+    }
+    */
+   /* 
+    public static void main(String[] args) {
+
+        CartaoCredito cartao = new CartaoCredito("Henrique", 2000, "1234-5678-9999");
+
+        cartao.pagar(500);
+
+        System.out.println("Saldo restante: " + cartao.getSaldo());
+    }
+    */
 
 
-        pet1.ImprimirDados();
+    public static void main(String[] args) {
 
- 
-        pet2.ImprimirDados();*/
+        ArrayList<Cogumelo> cogumelos = new ArrayList<>();
+        ArrayList<Agente> agentes = new ArrayList<>();
 
-        Cachorro cachorro = new Cachorro("Pedro","AuAu","Labrador","Cachorro",4,true,"Dourado");
-        Gato gato = new Gato("Mariana Souza","Mimi", "Siamês","Gato",2,false,"Branco");
-
-        cachorro.FazerSom();
-        gato.FazerSom();
-
-
+        cogumelos.add(new CogumeloComum(5));
+        cogumelos.add(new Cogumelo1Up(2));
+        cogumelos.add(new CogumeloVenenoso(1));
+        cogumelos.add(new SuperCogumelo(1));
+        cogumelos.add(new MegaCogumelo(1));
+        cogumelos.add(new MiniCogumelo(1));
+        cogumelos.add(new CogumeloHelice(1));
+        agentes.add(new Agente("Mario", 1.60));
+        agentes.add(new Agente("Luigi", 1.70));
+        agentes.add(new Agente("Peach", 1.65));
+        Simulador simulador = new Simulador();
+        simulador.ligar();
+        for (Agente a : agentes) {
+            System.out.println("\nTestando cogumelos no agente: " + a.getNome());
+            for (Cogumelo c : cogumelos) {
+                simulador.testarCogumelo(c, a);
+            }
+        }
+        simulador.desligar();
     }
 
 
@@ -204,17 +251,26 @@ class Main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

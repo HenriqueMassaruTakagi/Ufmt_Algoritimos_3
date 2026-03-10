@@ -14,11 +14,11 @@ public class Gato extends Pet {
         this.cor = cor;
     }
     public void Derrubar_Algo(){
-        System.out.println("Algo caiu");
+        System.out.println(getNome() + " derrubou alguma coisa!");
     }
     
     @Override
-    public void FazerSom(){
-        System.out.println("Miau");
+    public void FazerSom() {
+        System.out.println(getNome() + " diz: Miau!");
     }
 }

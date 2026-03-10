@@ -15,6 +15,7 @@ public class Cachorro extends Pet {
 
     @Override
     public void FazerSom(){
-        System.out.println("Au");
-    }
+        System.out.println(getNome() + " diz: Au Au!");
+    }   
 }
+    
